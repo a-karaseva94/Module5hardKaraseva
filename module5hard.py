@@ -18,10 +18,10 @@ import time
 
 class User:
 
-    def __init__(self):
-        self.nickname = ''
-        self.password = ''
-        self.age = int()
+    def __init__(self, nickname, password, age):
+        self.nickname = nickname
+        self.password = password
+        self.age = age
 
     def __str__(self):
         return str(self.nickname)
@@ -55,7 +55,7 @@ class UrTube:
 # password передаётся в виде строки, а сравнивается по хэшу.
 
     def register(self, nickname, password, age):
-        user = User()
+        user = User(nickname, password, age)
         user.nickname = nickname
         user.password = password
         user.age = age
